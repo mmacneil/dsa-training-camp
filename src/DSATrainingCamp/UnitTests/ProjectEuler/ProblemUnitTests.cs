@@ -21,5 +21,15 @@ namespace UnitTests.ProjectEuler
             var result = Problems.EvenFibonacciNumbers(ceiling);
             Assert.Equal(expected, result);
         }
+
+
+        [Theory]
+        [InlineData(13195, 29)]
+        [InlineData(600851475143, 6857)]
+        public void LargestPrimeNumber(long number, int expected)
+        {
+            var result = Problems.LargestPrimeFactor(number);
+            Assert.Equal(expected, result);
+        }
     }
 }

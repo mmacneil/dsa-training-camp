@@ -35,7 +35,7 @@ namespace ProjectEuler
 
             while (nextTerm <= ceiling)
             {
-                if(nextTerm % 2 == 0)
+                if (nextTerm % 2 == 0)
                 {
                     result += nextTerm;
                 }
@@ -47,5 +47,31 @@ namespace ProjectEuler
 
             return result;
         }
+
+        /* Largest prime factor
+        The prime factors of 13195 are 5, 7, 13 and 29.
+        What is the largest prime factor of the number 600851475143 ? */
+        public static long LargestPrimeFactor(long n)
+        {
+            /*  The simplest algorithm to find the prime factors of a number is to keep on dividing the original
+            number by prime factors until we get the remainder equal to 1. */
+
+            var factors = new List<long>();
+            var d = 2;
+
+            while(n > 1)
+            {
+                while(n % d==0)
+                {
+                    factors.Add(d);
+                    n /= d;
+                }
+
+                d++;
+            }
+
+            return factors.Max();
+        }
     }
 }
+
