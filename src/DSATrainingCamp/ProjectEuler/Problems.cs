@@ -57,17 +57,14 @@ namespace ProjectEuler
             number by prime factors until we get the remainder equal to 1. */
 
             var factors = new List<long>();
-            var d = 2;
 
-            while(n > 1)
+            for(var f = 2; n > 1; f++)  // 2 is the first prime factor so start there
             {
-                while(n % d==0)
+                if(n % f == 0)
                 {
-                    factors.Add(d);
-                    n /= d;
+                    factors.Add(f);
+                    n /= f;
                 }
-
-                d++;
             }
 
             return factors.Max();
