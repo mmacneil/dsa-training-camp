@@ -1,8 +1,4 @@
 ﻿
-
-using System;
-using System.Net.Http.Headers;
-
 namespace ProjectEuler
 {
     public class Problems
@@ -78,30 +74,22 @@ namespace ProjectEuler
         Find the largest palindrome made from the product of two 3-digit numbers.*/
         public static int LargestPalindromeProduct()
         {
-            int firstDigit = 999, secondDigit = 999, product = 0;
-
+            int firstDigit = 999, secondDigit = 999, largest = 0;
 
             for (var i = firstDigit; i > 99; i--)
             {
-                product = i * secondDigit;
-
-                if (IsPalindrome(product))
-                {
-                    return product;
-                }
-
                 for (var j = secondDigit; j > 99; j--)
                 {
-                    product = i * j;
+                    int product = i * j;
 
-                    if (IsPalindrome(product))
+                    if (IsPalindrome(product) && product > largest)
                     {
-                        return product;
+                        largest = product;
                     }
                 }
             }
 
-            return 0;
+            return largest;
         }
 
         private static bool IsPalindrome(int num)
@@ -110,7 +98,7 @@ namespace ProjectEuler
             int reverse = 0;
             while (tempValue > 0)
             {
-                reverse = reverse * 10 + tempValue % 10;
+                reverse = (reverse * 10) + tempValue % 10;
                 tempValue = tempValue / 10;
             }
 

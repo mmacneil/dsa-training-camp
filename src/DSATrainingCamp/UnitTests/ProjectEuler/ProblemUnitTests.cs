@@ -36,7 +36,7 @@ namespace UnitTests.ProjectEuler
         public void LargestPalindromeProduct()
         {
             var result = Problems.LargestPalindromeProduct();
-            Assert.Equal(1000, result);
+            Assert.Equal(906609, result);
         }
     }
 }
