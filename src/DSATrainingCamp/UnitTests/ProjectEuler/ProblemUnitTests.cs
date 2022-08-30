@@ -31,5 +31,12 @@ namespace UnitTests.ProjectEuler
             var result = Problems.LargestPrimeFactor(number);
             Assert.Equal(expected, result);
         }
+
+        [Fact]
+        public void LargestPalindromeProduct()
+        {
+            var result = Problems.LargestPalindromeProduct();
+            Assert.Equal(1000, result);
+        }
     }
 }

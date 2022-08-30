@@ -1,5 +1,8 @@
 ﻿
 
+using System;
+using System.Net.Http.Headers;
+
 namespace ProjectEuler
 {
     public class Problems
@@ -58,9 +61,9 @@ namespace ProjectEuler
 
             var factors = new List<long>();
 
-            for(var f = 2; n > 1; f++)  // 2 is the first prime factor so start there
+            for (var f = 2; n > 1; f++)  // 2 is the first prime factor so start there
             {
-                if(n % f == 0)
+                if (n % f == 0)
                 {
                     factors.Add(f);
                     n /= f;
@@ -69,6 +72,49 @@ namespace ProjectEuler
 
             return factors.Max();
         }
+
+        /* Largest palindrome product
+        A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+        Find the largest palindrome made from the product of two 3-digit numbers.*/
+        public static int LargestPalindromeProduct()
+        {
+            int firstDigit = 999, secondDigit = 999, product = 0;
+
+
+            for (var i = firstDigit; i > 99; i--)
+            {
+                product = i * secondDigit;
+
+                if (IsPalindrome(product))
+                {
+                    return product;
+                }
+
+                for (var j = secondDigit; j > 99; j--)
+                {
+                    product = i * j;
+
+                    if (IsPalindrome(product))
+                    {
+                        return product;
+                    }
+                }
+            }
+
+            return 0;
+        }
+
+        private static bool IsPalindrome(int num)
+        {
+            int tempValue = num;
+            int reverse = 0;
+            while (tempValue > 0)
+            {
+                reverse = reverse * 10 + tempValue % 10;
+                tempValue = tempValue / 10;
+            }
+
+            return reverse == num;
+        }
     }
 }
-
