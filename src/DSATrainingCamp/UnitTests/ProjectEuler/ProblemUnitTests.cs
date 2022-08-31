@@ -38,5 +38,12 @@ namespace UnitTests.ProjectEuler
             var result = Problems.LargestPalindromeProduct();
             Assert.Equal(906609, result);
         }
+
+        [Fact]
+        public void SmallestMultiple()
+        {
+            var result = Problems.SmallestMultiple();
+            Assert.Equal(232792560, result);
+        }
     }
 }

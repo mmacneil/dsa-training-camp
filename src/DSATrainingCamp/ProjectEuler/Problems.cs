@@ -99,10 +99,34 @@ namespace ProjectEuler
             while (tempValue > 0)
             {
                 reverse = (reverse * 10) + tempValue % 10;
-                tempValue = tempValue / 10;
+                tempValue /= 10;
             }
 
             return reverse == num;
+        }
+
+        /* Smallest multiple
+        2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+        What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20? */
+        public static int SmallestMultiple()
+        {
+            int result = 0, count = 0;
+
+            while(result==0)
+            {
+                count++;
+                result = count;
+
+                for(var i=1;i<=20;i++)
+                {
+                    if(count % i != 0)
+                    {
+                        result = 0;
+                        break;
+                    }
+                }
+            }
+            return result;
         }
     }
 }
