@@ -52,5 +52,13 @@ namespace UnitTests.ProjectEuler
             var result = Problems.SumSquareDifference();
             Assert.Equal(25164150, result);
         }
+
+
+        [Fact]
+        public void TenThousandFirstPrime()
+        {
+            var result = Problems.TenThousandFirstPrime();
+            Assert.Equal(104743, result);
+        }
     }
 }

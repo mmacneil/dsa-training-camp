@@ -150,5 +150,44 @@ namespace ProjectEuler
    
             return sum * sum - squareSum;
         }
+
+        /* 10,001st prime
+        By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+
+        What is the 10,001st prime number? */
+        public static int TenThousandFirstPrime()
+        {
+            int primeCount = 1, current = 2;
+
+            while(primeCount!=10001)
+            {
+                current++;
+                if(IsPrime(current))
+                {
+                    primeCount++;
+                }
+            }
+
+            return current;
+        }
+
+        private static bool IsPrime(int number)
+        {
+            if (number <= 1) return false;
+            if (number == 2) return true;
+            if (number % 2 == 0) return false;
+
+            var boundary = (int)Math.Floor(Math.Sqrt(number));
+
+            for (int i = 3; i <= boundary; i += 2)
+            {
+                if (number % i == 0)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }
