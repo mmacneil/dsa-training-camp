@@ -45,5 +45,12 @@ namespace UnitTests.ProjectEuler
             var result = Problems.SmallestMultiple();
             Assert.Equal(232792560, result);
         }
+
+        [Fact]
+        public void SumSquareDiffernce()
+        {
+            var result = Problems.SumSquareDifference();
+            Assert.Equal(25164150, result);
+        }
     }
 }

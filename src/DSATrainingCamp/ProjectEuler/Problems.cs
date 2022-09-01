@@ -112,14 +112,14 @@ namespace ProjectEuler
         {
             int result = 0, count = 0;
 
-            while(result==0)
+            while (result == 0)
             {
                 count++;
                 result = count;
 
-                for(var i=1;i<=20;i++)
+                for (var i = 1; i <= 20; i++)
                 {
-                    if(count % i != 0)
+                    if (count % i != 0)
                     {
                         result = 0;
                         break;
@@ -127,6 +127,28 @@ namespace ProjectEuler
                 }
             }
             return result;
+        }
+
+
+        /* Sum square difference
+        The sum of the squares of the first ten natural numbers is, 1²+2²+...+10² = 385
+
+        The square of the sum of the first ten natural numbers is, (1+2+...+10)² = 55² = 3025
+
+        Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 - 385 = 2640.
+
+        Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum. */
+        public static int SumSquareDifference()
+        {
+            int sum = 0, squareSum = 0;
+
+            for (var i = 1; i <= 100; i++)
+            {
+                sum += i;
+                squareSum += i * i;
+            }
+   
+            return sum * sum - squareSum;
         }
     }
 }
