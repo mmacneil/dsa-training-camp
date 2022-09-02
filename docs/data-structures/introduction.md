@@ -10,18 +10,71 @@ Common for integer values to be represented by 4 bytes (32-bit int = 0...1)
 
 When store contiguously in memory an array of integers might look like:
 
-|--------------------------------------------|
-| VALUE: 1 | 3 | 5 |
-| ADDRESS: $0 | $4 | $8 |
-|--------------------------------------------|
+<table>
+  <tr>
+    <th>VALUE</th>
+    <td>1</td>
+    <td>3</td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <th>ADDRESS</th>
+    <td>$0</td>
+    <td>$4</td>
+    <td>$8</td>
+  </tr>
+</table>
 
 An array of single-byte ASCII characters might look something like:
 
-|--------------------------------------------|
-| VALUE: a | b | c |
-| ADDRESS: $0 | $1 | $2 |
-|--------------------------------------------|
+<table>
+  <tr>
+    <th>VALUE</th>
+    <td>a</td>
+    <td>b</td>
+    <td>c</td>
+  </tr>
+  <tr>
+    <th>ADDRESS</th>
+    <td>$0</td>
+    <td>$1</td>
+    <td>$2</td>
+  </tr>
+</table>
 
 We can store values contiguously in memory no matter how big or small as long as we increment our address by the size of the value.
 
-Arrays are the most simple data structure.
+## Arrays
+
+Arrays are the most simple data structure. We use indexes to access the values. The first value is always at index 0. Because we can map an array index directly to the value in memory to retrieve it efficiently the operation can represented in Big O as O(1) - happens in constant time. No matter how big the array gets we can read it instantly. The name RAM (Random Access Memory) comes from the fact that we can randomly access any value in memory in constant time.
+
+Static arrays are of fixed size, we can't add new values to them. Some languages, i.e. Python and JavaScript don't use static arrays - they offer Dynamic Arrays as the default. Writing to or removing from an array of any position is also an O(1) operation - constant time.
+
+To insert an element in the middle of an array, we might have to shift every value - in the worst case this is an O(n) operation.
+
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Big-O Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r/w "i-th" element</td>
+<td>O(1) Constant time</td>
+</tr>
+<tr>
+<td>Insert or remove at end</td>
+<td>O(1) Constant time</td>
+</tr>
+<tr>
+<td>Insert middle</td>
+<td>O(N) Worst case -> Might have to shift every value</td>
+</tr>
+<tr>
+<td>Remove middle</td>
+<td>O(N) Worst case -> Might have to shift every value</td>
+</tr>
+</tbody>
+</table>
