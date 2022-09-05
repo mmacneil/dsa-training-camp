@@ -1,5 +1,7 @@
 # What is a Data Structure?
 
+<hr/>
+
 Simply put, data structures allow us to structure data inside of the computer's memory (RAM).
 
 The majority of today's personal computers measure their RAM in gigabytes. The prefix giga means 10⁹ in the International System of Units (SI). Therefore, one gigabyte is one billion bytes.
