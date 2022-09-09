@@ -10,7 +10,7 @@ A byte is a unit of digital information that most commonly consists of eight bit
 
 32-bit integer values are represented by 4 bytes (32-bit int "1" = 00000000000000000000000000000001)
 
-When stored contiguously in memory an array of integers might look like:
+When stored contiguously in memory an [array](https://en.wikipedia.org/wiki/Array_data_structure) of integers might look like:
 
 <table>
   <tr>
