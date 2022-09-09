@@ -4,7 +4,7 @@
 
 Simply put, data structures allow us to structure data inside of the computer's memory (RAM).
 
-The majority of today's personal computers measure their RAM in gigabytes. The prefix giga means 10⁹ in the International System of Units (SI). Therefore, one gigabyte is one billion bytes.
+Many of today's computers measure their RAM in gigabytes. The prefix giga means 10⁹ in the International System of Units (SI). Therefore, one gigabyte is one billion bytes.
 
 A byte is a unit of digital information that most commonly consists of eight bits. A bit is a position within the byte that can store either 0 or 1.
 
