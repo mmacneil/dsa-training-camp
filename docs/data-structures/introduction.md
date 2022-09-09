@@ -46,7 +46,9 @@ An array of single-byte ASCII characters might look something like:
 
 We can store values contiguously in memory no matter how big or small as long as we increment our address by the size of the value.
 
-## Arrays
+# Static Arrays
+
+<hr/>
 
 Arrays are the most simple data structure. We use indexes to access the values inside an array. The first value is always at index 0. Because we can map an array index directly to the value in memory to retrieve it efficiently the operation can represented in Big O as O(1).
 
