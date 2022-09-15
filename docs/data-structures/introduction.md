@@ -1,4 +1,4 @@
-# What is a Data Structure?
+# What Is a Data Structure?
 
 <hr/>
 
