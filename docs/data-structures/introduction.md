@@ -8,8 +8,6 @@ Many of today's computers measure their RAM in gigabytes. The prefix giga means 
 
 A byte is a unit of digital information that most commonly consists of eight bits. A bit is a position within the byte that can store either 0 or 1.
 
-<img src="https://github.com/mmacneil/dsa-training-camp/raw/main/docs/data-structures/img/ram.png" />
-
 32-bit integer values are represented by 4 bytes (32-bit int "1" = 00000000000000000000000000000001)
 
 When stored contiguously in memory an [array](https://en.wikipedia.org/wiki/Array_data_structure) of integers might look like:
