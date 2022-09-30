@@ -16,5 +16,14 @@ namespace UnitTests.LeetCode
             var result = Problems.RemoveDuplicates(numbers);
             Assert.Equal(expected, result);
         }
+
+        [Theory]
+        [InlineData(new int[] { 1 }, 1, 0)]
+        [InlineData(new int[] { 3, 2, 2, 3 }, 3, 2)]
+        public void RemoveElement(int[] numbers, int value, int expected)
+        {
+            var result = Problems.RemoveElement(numbers, value);
+            Assert.Equal(expected, result);
+        }
     }
 }
